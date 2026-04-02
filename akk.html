@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/paw.png">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Pip</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Pip</div>
+        <nav class="link">
+            <a href="index.html" class="main">Главная</a>
+            <a href="searсh.html" class="search">Поиск</a>
+            <a href="akk.html" id="profile-link" class="profile">Профиль</a>
+        </nav>
+    </header>
+    <div class="container-wrp">
+        <div class="container container--profile">
+            <div class="profile-head">
+                <label class="profile-avatar-label">
+                    <input type="file" id="avatar-input" accept="image/*" class="profile-avatar-input" hidden>
+                    <span class="profile-avatar" id="avatar-preview"></span>
+                </label>
+                <div class="profile-info">
+                    <div class="profile-name-row">
+                        <h1 class="profile-name" id="profile-name">Пользователь</h1>
+                        <span class="profile-id" id="profile-id">ID: —</span>
+                    </div>
+                    <textarea id="profile-bio" class="profile-bio" rows="1" maxlength="1000" placeholder="Расскажите о себе"></textarea>
+                </div>
+            </div>
+            <div class="profile-lower">
+                <a href="public.html"><button>Опубликовать</button></a>
+                <div class="profile-tabs">
+                    <button class="profile-tab profile-tab--active" aria-selected="true" data-tab="posts" id="tab-posts">Мои публикации</button>
+                    <button class="profile-tab" aria-selected="false" data-tab="likes" id="tab-likes">Понравившиеся</button>
+                </div>
+                <div class="profile-panels">
+                    <div class="profile-panel profile-panel--active" id="panel-posts">
+                        <div class="profile-gallery" id="gallery-posts"></div>
+                        <p class="profile-empty" id="empty-posts">Публикаций пока нет</p>
+                    </div>
+                    <div class="profile-panel" id="panel-likes" hidden>
+                        <div class="profile-gallery" id="gallery-likes"></div>
+                        <p class="profile-empty" id="empty-likes">Нет понравившихся изображений</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="contacts">
+        <nav class="sns">
+            <a href="http://t.me/Sfsfs_s" target="_blank"><img src="/images/telegram.svg" alt="tg"></a>
+            <a href="http://discord.com/users/695130945119846410" target="_blank" class="dc"><img src="/images/diskord.svg" alt="discord" class="discord"></a>
+            <a href="http://www.tiktok.com/@qsfsfsq?_r=1&_t=ZS-94gGSRmXEkK" target="_blank"><img src="/images/tiktok.svg" alt="tiktok"></a>
+            <a href="http://www.twitch.tv/sfsfsq" target="_blank"><img src="/images/twitch.svg" alt="twich"></a>
+            <a href="http://guns.lol/sfsfs" target="_blank" class="gl"><img src="/images/gunslol.png" alt="gunslol" class="gunslol"></a>
+        </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
