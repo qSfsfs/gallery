@@ -1,0 +1,297 @@
+@font-face {
+  font-family: OpenSans-Bold;
+  src: url(fonts/Open_Sans/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: OpenSans-Medium;
+  src: url(fonts/Open_Sans/OpenSans-Medium.ttf);
+}
+@font-face {
+  font-family: OpenSans-Light;
+  src: url(fonts/Open_Sans/OpenSans-Light.ttf);
+}
+@font-face {
+  font-family: SirinStencil;
+  src: url(fonts/SirinStencil/SirinStencil-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: OpenSans-Medium;
+  color: black;
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(132, 0, 255);
+}
+.logo {
+  font-family: SirinStencil;
+  font-size: 25px;
+}
+button:hover {
+  background-color: rgba(77, 243, 90, 0.5);
+}
+button {
+  height: 40px;
+  margin: 10px 0;
+  padding: 0 10px;
+  border-radius: 15px;
+  border: 1px solid rgb(136, 50, 170);
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+}
+.cat-reg {
+  width: 140px;
+}
+.link {
+  display: flex;
+  width: 100vw;;
+  justify-content: space-evenly;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #020202;
+  background-color: rgb(252, 213, 255);
+}
+.container {
+  margin: 0 auto auto auto;
+  height: 100vh;
+  max-width: 75%;
+  /* padding: 0 30px 20px 30px; */
+  background-color: rgba(244, 242, 255, 0.855);
+}
+.container-wrp {
+  background-color: rgb(255, 255, 255);
+  background-image: url(images/cat.webp);
+}
+footer {
+  border-top: 1px solid black;
+  padding: 20px;
+  background-color: rgb(252, 213, 255);
+}
+.sns {
+  display: flex;
+  justify-content: space-evenly;
+}
+.discord, .gunslol {
+  width: 60px;
+}
+.gl, .dc {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.gunslol {
+  max-height: fit-content;
+}
+
+/* search */
+.form {
+  display: flex;
+  justify-content: center; /* центрируем форму внутри контейнера */
+}
+.search-form {
+  border: 1px solid blueviolet;
+  display: inline-flex;
+  box-sizing: border-box;
+  padding-left: 10px;
+  margin: 30px auto; /* по центру горизонтально, без выхода за контейнер */
+  border-radius: 20px;
+  /* height: 50px; */
+  /* overflow: hidden; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: rgb(255, 255, 255);
+  width: 90%;       /* оставляем отступы по краям внутри контейнера */
+  max-width: 800px; /* дополнительное ограничение ширины */
+}
+.search_txt {
+  border: none;
+  width: 100%;
+  min-width: 10px;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  /* padding-right: 10px; */
+}
+.search_btn {
+  border: none;
+  width: 50px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* иконка по центру кнопки */
+  padding: 0;
+  background-color: transparent;
+}
+.search_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 30px;
+}
+
+/* profile (akk.html) */
+.container--profile {
+  min-height: 100vh;
+  padding: 24px 28px 40px;
+  box-sizing: border-box;
+}
+.profile-card {
+  max-width: 720px;
+  width: 100%;
+  margin: 0;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.profile-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px 24px;
+}
+.profile-avatar-label {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.profile-avatar {
+  display: block;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 2px solid rgb(136, 50, 170);
+  background-color: rgb(255, 255, 255);
+  background-image: var(--profile-avatar-bg, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+.profile-avatar--empty {
+  background-image: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+}
+.profile-avatar--empty::after {
+  content: "+";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  color: rgb(136, 50, 170);
+  font-family: OpenSans-Light, sans-serif;
+}
+.profile-info {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+.profile-name-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px 16px;
+  margin-bottom: 10px;
+}
+.profile-name {
+  font-family: OpenSans-Bold;
+  font-size: 1.4rem;
+}
+.profile-id {
+  color: rgb(90, 90, 90);
+}
+.profile-bio {
+  width: auto;
+  min-width: 170px;
+  max-width: 30%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgb(136, 50, 170);
+  background-color: transparent;
+  resize: none;
+  overflow: hidden;
+  font-size: 14px;
+}
+.profile-bio:focus {
+  outline: 2px solid rgba(132, 0, 255, 0.35);
+  outline-offset: 2px;
+}
+.profile-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 80%;
+  border-bottom: 3px solid rgb(200, 180, 220);
+}
+.profile-tab {
+  padding: 0 28px;
+  height: 44px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -3px;
+}
+.profile-tab:hover {
+  background-color: rgba(132, 0, 255, 0.06);
+}
+.profile-tab--active {
+  border-bottom-color: rgb(136, 50, 170);
+  color: black;
+  font-family: OpenSans-Bold;
+}
+.profile-panels {
+  padding-top: 20px;
+}
+.profile-panel {
+  display: none;
+}
+.profile-panel--active {
+  display: block;
+}
+.profile-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+.profile-thumb {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgb(200, 180, 220);
+  background: rgb(255, 255, 255);
+}
+.profile-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.profile-empty {
+  text-align: center;
+  color: rgb(100, 100, 100);
+  padding: 28px 12px;
+  font-size: 15px;
+}
+.profile-lower {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
