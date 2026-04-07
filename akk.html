@@ -19,6 +19,20 @@
     <div class="container-wrp">
         <div class="container container--profile">
             <div class="profile-head">
+                <div class="profile-menu-actions" id="profile-menu-actions">
+                    <button class="btn profile-menu-btn" id="profile-menu-btn" type="button">☰</button>
+                    <div class="profile-menu" id="profile-menu" hidden>
+                        <button class="btn profile-menu-item" id="profile-settings-btn" type="button">Настройки</button>
+                        <button class="btn profile-menu-item" id="profile-logout-btn" type="button">Выйти</button>
+                    </div>
+                </div>
+                <div class="admin-actions" id="admin-actions" hidden>
+                    <button class="btn admin-menu-btn" id="admin-menu-btn" type="button">⋯</button>
+                    <div class="admin-menu" id="admin-menu" hidden>
+                        <button class="btn admin-menu-item" id="ban-temporary-btn" type="button">Заблокировать на время</button>
+                        <button class="btn admin-menu-item" id="ban-forever-btn" type="button">Заблокировать навсегда</button>
+                    </div>
+                </div>
                 <label class="profile-avatar-label">
                     <input type="file" id="avatar-input" accept="image/*" class="profile-avatar-input" hidden>
                     <span class="profile-avatar" id="avatar-preview"></span>
@@ -32,10 +46,10 @@
                 </div>
             </div>
             <div class="profile-lower">
-                <a href="public.html"><button>Опубликовать</button></a>
+                <a href="public.html" id="publish-link"><button class="btn">Опубликовать</button></a>
                 <div class="profile-tabs">
-                    <button class="profile-tab profile-tab--active" aria-selected="true" data-tab="posts" id="tab-posts">Мои публикации</button>
-                    <button class="profile-tab" aria-selected="false" data-tab="likes" id="tab-likes">Понравившиеся</button>
+                    <button class="btn profile-tab profile-tab--active" aria-selected="true" data-tab="posts" id="tab-posts">Мои публикации</button>
+                    <button class="btn profile-tab" aria-selected="false" data-tab="likes" id="tab-likes">Понравившиеся</button>
                 </div>
                 <div class="profile-panels">
                     <div class="profile-panel profile-panel--active" id="panel-posts">

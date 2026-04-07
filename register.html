@@ -8,6 +8,68 @@
     <title>Pip</title>
 </head>
 <body>
-    
+    <div class="container-wrp">
+        <div class="auth-overlay" role="presentation">
+            <div class="auth-card" role="dialog">
+                <h1 class="auth-title" id="auth-title">Регистрация</h1>
+                <form id="register-form" class="auth-form" autocomplete="on">
+                    <div class="auth-field">
+                    <input
+                        id="reg-username"
+                        name="username"
+                        class="auth-input"
+                        type="text"
+                        minlength="2"
+                        maxlength="50"
+                        required
+                        autocomplete="username"
+                        placeholder="Имя пользователя"
+                    />
+                    </div>
+                    <div class="auth-field">
+                    <input
+                        id="reg-login"
+                        name="login"
+                        class="auth-input"
+                        type="text"
+                        minlength="3"
+                        maxlength="50"
+                        required
+                        autocomplete="login"
+                        placeholder="Логин"
+                    />
+                    </div>
+                    <div class="auth-field">
+                    <input
+                        id="reg-email"
+                        name="email"
+                        class="auth-input"
+                        type="email"
+                        required
+                        autocomplete="email"
+                        placeholder="Почта"
+                    />
+                    </div>
+                    <div class="auth-field">
+                    <input
+                        id="reg-password"
+                        name="password"
+                        class="auth-input"
+                        type="password"
+                        minlength="6"
+                        required
+                        autocomplete="password"
+                        placeholder="Пароль"
+                    />
+                    </div>
+                    <div class="auth-actions">
+                    <button type="submit" class="btn">Зарегистрироваться</button>
+                        <a href="auth.html" class="auth-link">Уже есть аккаунт? Войти</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="register.js"></script>
 </body>
 </html>

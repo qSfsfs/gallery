@@ -8,6 +8,41 @@
     <title>Pip</title>
 </head>
 <body>
-    
+    <div class="container-wrp">
+        <div class="auth-overlay" role="presentation">
+            <div class="auth-card" role="dialog">
+                <h1 class="auth-title" id="auth-title">Авторизация</h1>
+                <form id="auth-form" class="auth-form" autocomplete="on">
+                    <div class="auth-field">
+                        <input
+                            id="auth-login"
+                            name="login"
+                            class="auth-input"
+                            type="text"
+                            required
+                            autocomplete="username"
+                            placeholder="Логин"
+                        />
+                    </div>
+                    <div class="auth-field">
+                        <input
+                            id="auth-password"
+                            name="password"
+                            class="auth-input"
+                            type="password"
+                            required
+                            autocomplete="current-password"
+                            placeholder="Пароль"
+                        />
+                    </div>
+                    <div class="auth-actions">
+                        <button type="submit" class="btn">Войти</button>
+                        <a href="register.html" class="auth-link">Ещё нет аккаунта? Зарегистрироваться</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
 </body>
 </html>

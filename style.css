@@ -37,6 +37,10 @@ a:hover {
 button:hover {
   background-color: rgba(77, 243, 90, 0.5);
 }
+ 
+.btn:hover {
+  background-color: rgba(192, 33, 255, 0.22);
+}
 button {
   height: 40px;
   margin: 10px 0;
@@ -67,10 +71,10 @@ header {
   margin: 0 auto auto auto;
   height: 100vh;
   max-width: 75%;
-  /* padding: 0 30px 20px 30px; */
   background-color: rgba(244, 242, 255, 0.855);
 }
 .container-wrp {
+  height: 100vh;
   background-color: rgb(255, 255, 255);
   background-image: url(images/cat.webp);
 }
@@ -107,13 +111,9 @@ footer {
   padding-left: 10px;
   margin: 30px auto; /* по центру горизонтально, без выхода за контейнер */
   border-radius: 20px;
-  /* height: 50px; */
-  /* overflow: hidden; */
-  /* justify-content: center; */
-  /* align-items: center; */
   background-color: rgb(255, 255, 255);
   width: 90%;       /* оставляем отступы по краям внутри контейнера */
-  max-width: 800px; /* дополнительное ограничение ширины */
+  max-width: 800px;
 }
 .search_txt {
   border: none;
@@ -130,7 +130,7 @@ footer {
   margin: 0;
   display: flex;
   align-items: center;
-  justify-content: center; /* иконка по центру кнопки */
+  justify-content: center;
   padding: 0;
   background-color: transparent;
 }
@@ -155,6 +155,7 @@ footer {
   box-sizing: border-box;
 }
 .profile-head {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -294,4 +295,208 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 100%;
+}
+.profile-ban-message {
+  max-width: 760px;
+  margin: 0 0 18px 0;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid #b00020;
+  background-color: rgba(176, 0, 32, 0.08);
+}
+.profile-ban-message h2 {
+  margin-bottom: 8px;
+  font-family: OpenSans-Bold, sans-serif;
+}
+.profile-ban-message p {
+  margin-bottom: 6px;
+}
+.appeal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+.appeal-input {
+  width: 100%;
+  resize: vertical;
+  border-radius: 10px;
+  border: 1px solid rgb(136, 50, 170);
+  padding: 8px 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.admin-actions {
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
+.profile-menu-actions {
+  position: absolute;
+  top: 4px;
+  right: 50px;
+  z-index: 20;
+}
+.profile-menu-btn {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  margin: 0;
+  font-size: 20px;
+  line-height: 1;
+  padding: 0;
+}
+.profile-menu {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgb(136, 50, 170);
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 160px;
+}
+.profile-menu[hidden] {
+  display: none !important;
+}
+.profile-menu-item {
+  margin: 0;
+  height: auto;
+  padding: 8px 10px;
+  text-align: left;
+}
+.admin-menu-btn {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  margin: 0;
+  font-size: 26px;
+  line-height: 1;
+  padding: 0;
+}
+.admin-menu {
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid rgb(136, 50, 170);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 220px;
+}
+.admin-menu[hidden] {
+  display: none !important;
+}
+.admin-menu-item {
+  margin: 0;
+  height: auto;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+/* registration/auth modal */
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1000;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  box-sizing: border-box;
+  background-color: rgba(244, 242, 255, 0.96);
+  border: 1px solid rgb(136, 50, 170);
+  border-radius: 20px;
+  padding: 24px 18px 20px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.15);
+}
+
+.auth-title {
+  text-align: center;
+  font-family: OpenSans-Bold, sans-serif;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-label {
+  color: rgb(90, 90, 90);
+  font-size: 14px;
+}
+
+.auth-input {
+  height: 42px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 0 14px;
+  border: 1px solid rgb(136, 50, 170);
+  background-color: #fff;
+  outline: none;
+}
+
+.auth-input::placeholder {
+  font-size: 14px;
+  color: rgba(90, 90, 90, 0.7);
+}
+
+.auth-input:focus {
+  box-shadow: 0 0 0 3px rgba(132, 0, 255, 0.22);
+}
+
+.auth-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.auth-card .auth-actions button {
+  background-color: rgba(223, 144, 255, 0.12);
+  border-color: rgb(136, 50, 170);
+}
+
+.auth-card .auth-actions button:hover {
+  background-color: rgba(192, 33, 255, 0.22);
+}
+
+.auth-link {
+  text-align: center;
+  color: rgb(132, 0, 255);
+  font-size: 14px;
+}
+
+.auth-status {
+  min-height: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.auth-status--error {
+  color: #b00020;
+}
+
+.auth-status--success {
+  color: #1b5e20;
 }

@@ -15,9 +15,14 @@
   "type": "module",
   "dependencies": {
     "@hono/node-server": "^1.19.6",
-    "hono": "^4.12.10"
+    "dotenv": "^17.4.0",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.10",
+    "mysql2": "^3.20.0"
   },
   "devDependencies": {
+    "@types/node": "^25.5.2",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }
